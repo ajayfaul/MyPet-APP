@@ -14,6 +14,6 @@ public class profil_fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragmen_home, null);
+        return inflater.inflate(R.layout.fragment_profil, null);
     }
 }

@@ -30,10 +30,10 @@ public class menuNav extends AppCompatActivity implements BottomNavigationView.O
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            switch (menuItem.getItemId()){
+            switch (menuItem.getItemId()) {
 
                 case R.id.navigation_home:
-                    loadFragment(new histori_fragment());
+                    loadFragment(new Home_fragment());
                     return true;
 
                 case R.id.navigation_histori:
@@ -49,16 +49,15 @@ public class menuNav extends AppCompatActivity implements BottomNavigationView.O
         }
     };
 
-    void loadFragment(Fragment fragment){
-        FragmentTransaction ft=getSupportFragmentManager()
+    void loadFragment(Fragment fragment) {
+        FragmentTransaction ft = getSupportFragmentManager()
                 .beginTransaction();
-                ft.replace(R.id.Fragment,fragment);
-                ft.commit();
+        ft.replace(R.id.Fragment, fragment);
+        ft.commit();
 
     }
 
 
-    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         return false;
     }
