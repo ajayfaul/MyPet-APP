@@ -38,14 +38,14 @@
             android:shadowDy="0"
             android:shadowRadius="10"
             app:layout_constraintRight_toRightOf="parent"
-            />
+            tools:ignore="MissingConstraints" />
 
     </android.support.constraint.ConstraintLayout>
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    >
+    tools:ignore="MissingConstraints">
 
     <TextView
         android:layout_width="wrap_content"
