@@ -2,11 +2,13 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:id="@+id/constraintLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
 
-            <!-- header-->
+    <!-- header-->
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -16,59 +18,67 @@
 
         <ImageView
 
-            android:id="@+id/notif"
+            android:id="@+id/notificon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
             android:shadowColor="@color/text_shadow"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="10"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:srcCompat="@drawable/notif" />
 
-
+            app:srcCompat="@drawable/notif"
+            tools:layout_editor_absoluteY="0dp" />
 
 
         <ImageView
-            android:id="@+id/setting"
-            app:srcCompat="@drawable/settng"
-            android:layout_width="31dp"
-            android:layout_height="40dp"
+
+            android:id="@+id/imgSeting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="348dp"
+            android:layout_marginEnd="16dp"
             android:shadowColor="@color/text_shadow"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="10"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/setting"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:text="MyPet"
+            android:textSize="29dp"
+
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
     </android.support.constraint.ConstraintLayout>
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-
-    tools:ignore="MissingConstraints">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:shadowColor="@color/text_shadow"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="10"
-        android:text="MyPet"
-        android:textSize="29dp"
-
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-</android.support.constraint.ConstraintLayout>
 
     <!-- card view untuk adopsi-->
     <android.support.v7.widget.CardView
@@ -79,10 +89,10 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/cat_cropped"
-        app:cardBackgroundColor="@color/colorPrimary"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="10"
+        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="16dp"
         app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toStartOf="@+id/cardView"
@@ -92,7 +102,7 @@
 
         <ImageView
 
-            android:id="@+id/adoption"
+            android:id="@+id/imgadoption"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
@@ -119,18 +129,18 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView2"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:ignore="MissingConstraints"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="10">
+        tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/petgroming"
+            android:id="@+id/imgpetgroming"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
@@ -154,48 +164,50 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-       >
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="192dp"
+            android:layout_marginTop="176dp"
             android:paddingLeft="8dp"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="10"
-            android:textSize="20dp"
             android:text="Lates Pet Adoption"
+            android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="0dp" />
 
 
     </android.support.constraint.ConstraintLayout>
 
-    <ScrollView
+
+    <!--scrool view untuk late post-->
+
+
+    <HorizontalScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="223dp"
-        android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/cardView2"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="185dp"
             android:layout_marginTop="44dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
             android:shadowDx="0"
             android:shadowDy="0"
-            android:shadowRadius="10">
+            android:shadowRadius="10"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
 
             //--------------------memasukan latepost-------///
 
@@ -206,18 +218,18 @@
                 android:layout_marginStart="28dp"
 
                 android:layout_marginEnd="8dp"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-                tools:ignore="MissingConstraints"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10">
+                tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/hewan"
+                    android:id="@+id/imghewan"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
@@ -263,10 +275,10 @@
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="28dp"
+                android:layout_marginEnd="8dp"
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="10"
-                android:layout_marginEnd="8dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -275,7 +287,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/hewan1"
+                    android:id="@+id/imghewan1"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
@@ -321,10 +333,10 @@
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="28dp"
+                android:layout_marginEnd="8dp"
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="10"
-                android:layout_marginEnd="8dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -333,7 +345,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/hewan4"
+                    android:id="@+id/imghewan4"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
@@ -379,10 +391,10 @@
                 android:layout_width="150dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="28dp"
+                android:layout_marginEnd="8dp"
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="10"
-                android:layout_marginEnd="8dp"
                 app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -391,7 +403,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageView
-                    android:id="@+id/hewan5"
+                    android:id="@+id/imghewan5"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:adjustViewBounds="true"
@@ -431,7 +443,222 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </HorizontalScrollView>
 
+    <!--....Forum,,,,,-->
+
+    <!--<HorizontalScrollView-->
+    <!--android:id="@+id/scrollView1"-->
+    <!--android:layout_width="669dp"-->
+    <!--android:layout_height="248dp"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="12dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/scrollView2"-->
+    <!--tools:ignore="MissingConstraints">-->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+
+        android:layout_marginTop="252dp"
+
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <!--sadasdasdasdasda-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView16"
+            android:layout_width="94dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+
+
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="10dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toEndOf="@+id/cardView12"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteY="141dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView12"
+            android:layout_width="94dp"
+            android:layout_height="65dp"
+
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="15dp"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="139dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+        <!--sdadasdasdasdas-->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView9"
+            android:layout_width="94dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="40dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toEndOf="@+id/cardView14"
+            tools:ignore="MissingConstraints,NotSibling">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView14"
+            android:layout_width="94dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="24dp"
+
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/cardView15"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteY="36dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView15"
+            android:layout_width="94dp"
+            android:layout_height="65dp"
+            android:layout_gravity=""
+
+            android:layout_marginStart="40dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints,NotSibling"
+            tools:layout_editor_absoluteY="35dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView17"
+            android:layout_width="98dp"
+            android:layout_height="65dp"
+            android:layout_gravity=""
+
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="24dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardView12"
+            app:layout_constraintTop_toBottomOf="@+id/cardView15"
+            tools:ignore="MissingConstraints,NotSibling">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="8dp"
+                android:text="kucing"
+                android:textColor="@color/text_shadow_white" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </android.support.constraint.ConstraintLayout>
+    <!--</HorizontalScrollView>-->
     //-----------selesai------////
 </android.support.constraint.ConstraintLayout>
