@@ -13,7 +13,7 @@
         <activity android:name=".view.menuNav">
 
         </activity>
-        <activity android:name=".view.splash"> <intent-filter>
+        <activity android:name=".view.splash_activity"> <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
