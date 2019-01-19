@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.mypetapp.example.mypet.R;
 
-public class splash extends AppCompatActivity {
+public class splash_activity extends AppCompatActivity {
     private static int waktu = 4000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent logininten = new Intent(splash.this, menuNav.class);
-                startActivity(logininten);
+                Intent splashinten = new Intent(splash_activity.this, menuNav.class);
+                startActivity(splashinten);
                 finish();
 
             }

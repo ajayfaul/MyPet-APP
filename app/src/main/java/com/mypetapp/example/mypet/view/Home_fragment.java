@@ -1,15 +1,21 @@
 package com.mypetapp.example.mypet.view;
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+=======
+import android.content.Intent;
+>>>>>>> master
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.Button;
 import android.widget.ImageView;
 import butterknife.BindView;
@@ -132,6 +138,35 @@ public class Home_fragment extends Fragment {
         Intent i=new Intent(getContext(),notifActivity.class);
         startActivity(i);
     }
+=======
+import android.widget.ImageButton;
+
+import com.mypetapp.example.mypet.R;
+
+public class Home_fragment extends Fragment{
+
+    Intent intent;
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragmen_home, null);
+
+        intent = new Intent(getActivity(), SettingsActivity.class);
+        final ImageButton btnSetting = (ImageButton) view.findViewById(R.id.setting);
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+
+        return view;
+    }
+
+}
+>>>>>>> master
 
     @OnClick(R.id.imgpetgroming)
     public void Klik2(){
