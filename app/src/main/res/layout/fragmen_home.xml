@@ -29,7 +29,7 @@
 
 
 
-        <ImageView
+        <ImageButton
             android:id="@+id/setting"
             app:srcCompat="@drawable/settng"
             android:layout_width="31dp"
@@ -39,6 +39,7 @@
             android:shadowDy="0"
             android:shadowRadius="10"
             app:layout_constraintRight_toRightOf="parent"
+            android:onClick="bukaSettings"
             tools:ignore="MissingConstraints" />
 
     </android.support.constraint.ConstraintLayout>
