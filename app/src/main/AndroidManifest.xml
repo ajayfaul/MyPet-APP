@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".view.petgroomingActivity"></activity>
         <activity android:name=".view.adoptionActivity" />
         <activity android:name=".view.settingActivity" />
@@ -26,10 +27,16 @@
 >>>>>>> master
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+=======
+>>>>>>> parent of 47fb095... fitur klik
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".view.menuNav">
+
         </activity>
+        <activity android:name=".view.splash"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
